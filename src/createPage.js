@@ -71,13 +71,31 @@ export const menuPage = (() =>{
     console.log(oystersList);
 
     function createMenu(){
+        const oystersHeaderContainer= document.createElement("div")
+        content.appendChild(oystersHeaderContainer);
+        oystersHeaderContainer.classList.add("headerDivs")
+
+        const oystersHeader= document.createElement("h2")
+        oystersHeaderContainer.appendChild(oystersHeader);
+        oystersHeader.classList.add("headerTitles")
+        oystersHeader.textContent="Oysters"
+
         const oystersListDiv = document.createElement("div")
         content.appendChild(oystersListDiv)
-        oystersListDiv.classList.add("Oysters")
+        oystersListDiv.classList.add("oysters")
+
+        const clamsHeaderContainer= document.createElement("div")
+        content.appendChild(clamsHeaderContainer);
+        clamsHeaderContainer.classList.add("headerDivs")
+
+        const clamsHeader= document.createElement("h2")
+        clamsHeaderContainer.appendChild(clamsHeader);
+        clamsHeader.classList.add("headerTitles")
+        clamsHeader.textContent="Clams"
 
         const clamsListDiv = document.createElement("div")
         content.appendChild(clamsListDiv)
-        clamsListDiv.classList.add("Clams");
+        clamsListDiv.classList.add("clams");
 
         let draftList = [];
         const budLight = new alcohol ("Bud Light","$7.00","$10.00","16 Oz","23 Oz")
@@ -94,10 +112,23 @@ export const menuPage = (() =>{
 
         const laAle = new alcohol ("LA Ale Works Lunar Kitten IPA","$9.00","$11.00","16 Oz","23 Oz")
         draftList.push(laAle);
+
+        const draftHeaderContainer= document.createElement("div")
+        content.appendChild(draftHeaderContainer);
+        draftHeaderContainer.classList.add("headerDivs")
+
+        const draftHeader= document.createElement("h2")
+        draftHeaderContainer.appendChild(draftHeader);
+        draftHeader.classList.add("headerTitles")
+        draftHeader.textContent="Draft"
         
         const draftListDiv = document.createElement("div")
         content.appendChild(draftListDiv)
         draftListDiv.classList.add("draft")
+
+        let draftContainer= document.createElement("div");
+        draftContainer.classList.add("draftContainer");
+        draftListDiv.appendChild(draftContainer);
 
         let wineList =[];
         const moscato = new alcohol 
@@ -113,12 +144,26 @@ export const menuPage = (() =>{
         wineList.push(ziobaffa)
 
         const villa = new alcohol
-        ("Sauvignon Blanc | La Villaudiére | Loire Valley, France","$14.00","$50.00","Glass","Bottle")
+        ("Sauvignon Blanc | La Villaudiére | France","$14.00","$50.00","Glass","Bottle")
         wineList.push(villa)
+
+        const wineHeaderContainer= document.createElement("div")
+        content.appendChild(wineHeaderContainer);
+        wineHeaderContainer.classList.add("headerDivs")
+
+        const wineHeader= document.createElement("h2")
+        wineHeaderContainer.appendChild(wineHeader);
+        wineHeader.classList.add("headerTitles")
+        wineHeader.textContent="Wine"
 
         const wineListDiv = document.createElement("div")
         content.appendChild(wineListDiv)
         wineListDiv.classList.add("wine")
+
+        let wineContainer= document.createElement("div");
+        wineContainer.classList.add("wineContainer");
+        wineListDiv.appendChild(wineContainer);
+
         
         for(let i = 0; i < oystersList.length ; i++) {
             let oystersTitleDiv = document.createElement("div");
@@ -144,15 +189,15 @@ export const menuPage = (() =>{
             oystersHalf.appendChild(oystersHalfPriceDiv);
             oystersHalfPriceDiv.textContent= oystersList[i].halfPrice;
 
-            let oystersdozenDiv = document.createElement("div");
-            oystersdozenDiv.classList.add("oystersdozen");
-            oystersDozen.appendChild(oystersdozenDiv);
-            oystersdozenDiv.textContent= oystersList[i].dozen;
+            let oystersDozenDiv = document.createElement("div");
+            oystersDozenDiv.classList.add("oystersDozen");
+            oystersDozen.appendChild(oystersDozenDiv);
+            oystersDozenDiv.textContent= oystersList[i].dozen;
 
-            let oystersdozenPriceDiv = document.createElement("div");
-            oystersdozenPriceDiv.classList.add("oystersdozenPrice");
-            oystersDozen.appendChild(oystersdozenPriceDiv);
-            oystersdozenPriceDiv.textContent= oystersList[i].dozenPrice;
+            let oystersDozenPriceDiv = document.createElement("div");
+            oystersDozenPriceDiv.classList.add("oystersDozenPrice");
+            oystersDozen.appendChild(oystersDozenPriceDiv);
+            oystersDozenPriceDiv.textContent= oystersList[i].dozenPrice;
 
         }
         for(let i = 0; i < clamsList.length ; i++) {
@@ -179,15 +224,15 @@ export const menuPage = (() =>{
             clamsHalf.appendChild(clamsHalfPriceDiv);
             clamsHalfPriceDiv.textContent= clamsList[i].halfPrice;
 
-            let clamsdozenDiv = document.createElement("div");
-            clamsdozenDiv.classList.add("clamsdozen");
-            clamsDozen.appendChild(clamsdozenDiv);
-            clamsdozenDiv.textContent= clamsList[i].dozen;
+            let clamsDozenDiv = document.createElement("div");
+            clamsDozenDiv.classList.add("clamsDozen");
+            clamsDozen.appendChild(clamsDozenDiv);
+            clamsDozenDiv.textContent= clamsList[i].dozen;
 
-            let clamsdozenPriceDiv = document.createElement("div");
-            clamsdozenPriceDiv.classList.add("clamsdozenPrice");
-            clamsDozen.appendChild(clamsdozenPriceDiv);
-            clamsdozenPriceDiv.textContent= clamsList[i].dozenPrice;
+            let clamsDozenPriceDiv = document.createElement("div");
+            clamsDozenPriceDiv.classList.add("clamsDozenPrice");
+            clamsDozen.appendChild(clamsDozenPriceDiv);
+            clamsDozenPriceDiv.textContent= clamsList[i].dozenPrice;
 
         }
 
@@ -195,16 +240,16 @@ export const menuPage = (() =>{
         for(let i = 0; i < draftList.length ; i++) {
             let draftTitleDiv = document.createElement("div");
             draftTitleDiv.classList.add("draftTitle");
-            draftListDiv.appendChild(draftTitleDiv);
+            draftContainer.appendChild(draftTitleDiv);
             draftTitleDiv.textContent= draftList[i].title;
 
             let draftSm = document.createElement("div");
             draftTitleDiv.appendChild(draftSm);
-            draftSm.classList.add("16oz-item");
+            draftSm.classList.add("s16oz-item");
 
             let draftLg = document.createElement("div");
             draftTitleDiv.appendChild(draftLg);
-            draftLg.classList.add("23oz-item");
+            draftLg.classList.add("l23oz-item");
 
             let draftSmSizeDiv = document.createElement("div");
             draftSmSizeDiv.classList.add("draftSmSize");
@@ -230,7 +275,7 @@ export const menuPage = (() =>{
         for(let i = 0; i < wineList.length ; i++) {
             let wineTitleDiv = document.createElement("div");
             wineTitleDiv.classList.add("wineTitle");
-            wineListDiv.appendChild(wineTitleDiv);
+            wineContainer.appendChild(wineTitleDiv);
             wineTitleDiv.textContent= wineList[i].title;
 
             let wineGlass = document.createElement("div");
@@ -261,12 +306,64 @@ export const menuPage = (() =>{
             wineBottle.appendChild(wineBottlePriceDiv);
             wineBottlePriceDiv.textContent= wineList[i].lgPrice;
 
-        }
-        
-        
+        } 
 }
 
 return{
     createMenu
 }
+})();
+
+export const contactPage = (()=>{
+    class contactPersonnel {
+        constructor(name, position, phoneNumber, email) {
+            this.name = name;
+            this.position = position;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }    
+    }
+
+    let contactList =[];
+    const barry = new contactPersonnel("Barry Bucks","Owner","(854)827-7362","barrytheowner@joonspoon.com")
+    contactList.push(barry);
+
+    const karen = new contactPersonnel("Karen Ruins","Manager","(911)122-3828","karenthemanager@joonspoon.com")
+    contactList.push(karen);
+
+    const judy = new contactPersonnel("Judy Sits","Hostess","(412)239-2493","judythehostess@joonspoon.com")
+    contactList.push(judy);
+
+    function createContacts(){
+        for(let i = 0; i < contactList.length ; i++) {
+            const employeeContainer= document.createElement("div")
+            content.appendChild(employeeContainer);
+            employeeContainer.classList.add("employeeDivs")
+    
+            const nameDiv= document.createElement("h2")
+            employeeContainer.appendChild(nameDiv);
+            nameDiv.classList.add("name")
+            nameDiv.textContent=contactList[i].name;
+
+            const positionDiv= document.createElement("div")
+            employeeContainer.appendChild(positionDiv);
+            positionDiv.classList.add("position")
+            positionDiv.textContent=contactList[i].position;
+            
+            const phoneNumberDiv= document.createElement("div")
+            employeeContainer.appendChild(phoneNumberDiv);
+            phoneNumberDiv.classList.add("phoneNumber")
+            phoneNumberDiv.textContent=contactList[i].phoneNumber;
+
+            const emailDiv= document.createElement("div")
+            employeeContainer.appendChild(emailDiv);
+            emailDiv.classList.add("email")
+            emailDiv.textContent=contactList[i].email;
+    
+        }
+
+    } 
+    return{
+        createContacts
+    }
 })();

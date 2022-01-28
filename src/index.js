@@ -1,5 +1,6 @@
-import {menuPage} from './createPage.js';
 import {homePage} from './createPage.js';
+import {menuPage} from './createPage.js';
+import {contactPage} from './createPage.js';
 import './styles.css';
 
 const body = document.getElementById("body");
@@ -41,6 +42,7 @@ contactButton.innerHTML = "Contact";
 headerButtonContainer.appendChild(contactButton);
 contactButton.addEventListener('click', ()=> {
     clearContent();
+    contactPage.createContacts();
 })
 
 const clearContent = function (){

@@ -50,3 +50,118 @@ button {
 .restaurantBio{
     color:rgb(255, 255, 255)
 }
+.oystersTitle{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+.clamsTitle{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+.draftTitle{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    justify-content:center;
+}
+.wineTitle{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+.oysters{
+    padding: 1.5rem;
+    display: flex;
+    justify-content:center;
+
+}
+.oystersHalfPrice{
+    display:flex;
+    justify-content: flex-end;
+}
+.oystersDozenPrice{
+    display:flex;
+    justify-content: flex-end;
+}
+.clams{
+    display: flex;
+    justify-content:center;   
+}
+.wine{
+    display: flex;
+    justify-content:center;
+}
+.wineContainer{
+    display:flex;   
+    width: 60rem;
+    flex-wrap: wrap;
+}
+.draft{
+    display: flex;
+    justify-content:center;
+
+}
+.draftContainer{
+    display:flex;   
+    width: 60rem;
+    flex-wrap: wrap;
+
+}
+.half-item{
+    padding-top: 1rem;
+    display:flex;
+    width: 27rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.dozen-item{
+    padding-top: 0.6rem;
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.s16oz-item{
+    padding-top: 1rem;
+    display:flex;
+    width: 27rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.l23oz-item{
+    padding-top: 0.6rem;
+    display:flex;
+    width: 27rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.glass-item{
+    padding-top: 1rem;
+    display:flex;
+    width: 27rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.bottle-item{
+    padding-top: 0.6rem;
+    display:flex;
+    width: 27rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+.headerDivs{
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(210, 186, 182);
+    width: 58rem;
+    margin:1rem auto 0rem;
+}
+.employeeDivs{
+    display: flex;
+    flex-direction: column;
+    margin:2rem auto 0rem;
+    width: 25rem;
+    border: solid;
+    border-color: rgb(177, 177, 177);
+    border-radius: 2rem;
+    padding: 5rem;
+
+}

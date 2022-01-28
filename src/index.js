@@ -1,5 +1,6 @@
 import {menuPage} from './createPage.js';
 import {homePage} from './createPage.js';
+import './styles.css';
 
 const body = document.getElementById("body");
 const header = document.createElement("div");
